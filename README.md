@@ -8,4 +8,37 @@ Diferente dos grandes foguetes que levam toneladas ao espaço, o MLBR é um fogu
 
 Em homenagem a esse projeto, foi criado este script que tem como objetivo simular e visualizar de forma didática a trajetória de lançamento do MLBR, representando a missão de colocação de um satélite em órbita. Essa simulação inclui elementos visuais, temporais e informativos, com foco em demonstrar o perfil de voo e os estágios da missão descritos acima. 
 
+--------------------------------
+
+# 🚀 Simulador de Lançamento MLBR - Microlançador Brasileiro
+Este projeto simula de forma gráfica e interativa o lançamento de um microlançador brasileiro (MLBR), com visualização da trajetória usando `matplotlib`.
+
+## 🖼️ Visualização
+
+A trajetória é sobreposta a uma imagem da base de lançamento de Alcântara, mostrando os estágios da missão.
 ![Figure_1](https://github.com/user-attachments/assets/929b460a-4557-49c4-bdc9-1cd5040501be)
+
+## 📂 Estrutura do projeto
+mlbr-simulador/
+├── simulador_mlbr.py
+├── imagens/
+│ └── alcantara.jpg
+├── README.md
+└── requirements.txt
+
+
+## ▶️ Como executar
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/mlbr-simulador.git
+cd mlbr-simulador
+
+Instale as dependências:
+pip install -r requirements.txt
+
+🧪 Dependências
+matplotlib
+time (embutido no Python)
+
+📜 Licença
+Este projeto está licenciado sob a licença MIT. Sinta-se livre para usar, modificar e compartilhar!
