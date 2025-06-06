@@ -27,7 +27,7 @@ mlbr-simulador/
 └── requirements.txt
 
 
-## ▶️ Como executar
+## ▶️ Dependências e Como Executar
 1. Clone o repositório:
 ```bash
 git clone https://github.com/seu-usuario/mlbr-simulador.git
