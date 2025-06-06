@@ -5,6 +5,7 @@ Este projeto simula de forma gráfica e interativa o lançamento de um microlan�
 ## 🖼️ Visualização
 
 A trajetória é sobreposta a uma imagem da base de lançamento de Alcântara, mostrando os estágios da missão.
+![image](https://github.com/user-attachments/assets/92b6a5e6-36d0-4187-a47e-45f87284f13c)
 
 ## 📂 Estrutura do projeto
 
