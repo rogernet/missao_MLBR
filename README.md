@@ -1,6 +1,4 @@
-# missao_MLBR
 Entendendo e simulando a missão do MLBR.
-
 ![missao_MLBR](https://github.com/user-attachments/assets/75b1d035-8097-4a83-b383-9d4ffbd01d76)
 
 Diferente dos grandes foguetes que levam toneladas ao espaço, o MLBR é um foguete menor, ágil e preciso, pensado especialmente para colocar pequenos satélites em órbitas baixas. E por que isso importa? Porque o futuro do espaço está nos satélites compactos: mais baratos, rápidos de produzir e com usos que vão da agricultura à internet das coisas. 
