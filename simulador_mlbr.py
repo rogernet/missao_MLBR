@@ -3,9 +3,10 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import os
 
+# Caminho relativo da imagem
 imagem_path = os.path.join("imagens", "alcantara.jpg")
 
-# Dados da missão
+# Dados da missão ajustados
 altitudes = [0, 40, 150, 300, 450]  # km
 velocidades = [0, 2000, 5000, 4800, 7700]  # m/s
 estagios = [
@@ -25,6 +26,7 @@ for i in range(5, 0, -1):
 print("\nIgnição! Decolagem do MLBR!")
 time.sleep(2)
 
+# Carregar imagem da base de Alcântara
 if not os.path.exists(imagem_path):
     print(f"⚠️  Imagem não encontrada: {imagem_path}")
     print("Por favor, adicione a imagem da base de Alcântara na pasta /imagens com o nome 'alcantara.jpg'")
