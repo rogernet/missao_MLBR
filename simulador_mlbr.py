@@ -6,7 +6,7 @@ import os
 # imagem da base (tem q ter essa pasta/imagem)
 img_path = os.path.join("imagens", "F:\\Projetos_tecnicos\\Python\MLBR\\alcantara.jpg")
 
-# trajetoria estimada (valores chutados mas fazem sentido)
+# trajetoria estimada
 alt_km = [0, 40, 150, 300, 450]
 vel_ms = [0, 2000, 5000, 4800, 7700]
 fases = ["Lançamento", "1º Estágio", "2º Estágio", "Coasting", "Órbita"]
@@ -20,13 +20,13 @@ for t in range(5, 0, -1):
 print("\n🔥 Ignição! MLBR subindo!")
 time.sleep(1.5)
 
-# checar se tem imagem
+# checa se tem imagem
 if not os.path.exists(img_path):
     print(f"⚠️  Cadê a imagem? Esperava {img_path}")
     print("Coloca a imagem da base de Alcântara na pasta 'imagens' com nome 'alcantara.jpg'")
     exit()
 
-# carregar o fundo
+# carrega o fundo
 img = mpimg.imread(img_path)
 
 # gráfico com fundo de Alcântara
