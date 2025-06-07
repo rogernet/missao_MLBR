@@ -36,7 +36,7 @@ plt.imshow(img, extent=[min(alt_km), max(alt_km), min(vel_ms), max(vel_ms)],
 
 plt.plot(alt_km, vel_ms, 'ro-', linewidth=2)
 
-plt.title("Simulação de voo - MLBR - Ao infinito e Além!")
+plt.title("Simulação de voo MLBR .:. Ao infinito e Além!")
 plt.xlabel("Altitude (km)")
 plt.ylabel("Velocidade (m/s)")
 plt.grid(True)
