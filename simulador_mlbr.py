@@ -12,7 +12,7 @@ vel_ms = [0, 2000, 5000, 4800, 7700]
 fases = ["Lançamento", "1º Estágio", "2º Estágio", "Coasting", "Órbita"]
 
 # contagem clássica
-print("Contagem regressiva p/ MLBR 🚀")
+print("Contagem regressiva para o MLBR 🚀 - Ao infinito e Além!")
 for t in range(5, 0, -1):
     print(f"{t}...")
     time.sleep(1)
@@ -36,7 +36,7 @@ plt.imshow(img, extent=[min(alt_km), max(alt_km), min(vel_ms), max(vel_ms)],
 
 plt.plot(alt_km, vel_ms, 'ro-', linewidth=2)
 
-plt.title("Simulação de voo - MLBR")
+plt.title("Simulação de voo - MLBR - Ao infinito e Além!")
 plt.xlabel("Altitude (km)")
 plt.ylabel("Velocidade (m/s)")
 plt.grid(True)
