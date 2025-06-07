@@ -3,53 +3,51 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import os
 
-# Caminho relativo da imagem
-imagem_path = os.path.join("imagens", "alcantara.jpg")
+# imagem da base (tem q ter essa pasta/imagem)
+img_path = os.path.join("imagens", "F:\\Projetos_tecnicos\\Python\MLBR\\alcantara.jpg")
 
-# Dados da missão ajustados
-altitudes = [0, 40, 150, 300, 450]  # km
-velocidades = [0, 2000, 5000, 4800, 7700]  # m/s
-estagios = [
-    "Lançamento", 
-    "1º Estágio", 
-    "2º Estágio", 
-    "Coasting Controlado", 
-    "Injeção Orbital"
-]
+# trajetoria estimada (valores chutados mas fazem sentido)
+alt_km = [0, 40, 150, 300, 450]
+vel_ms = [0, 2000, 5000, 4800, 7700]
+fases = ["Lançamento", "1º Estágio", "2º Estágio", "Coasting", "Órbita"]
 
-# Simulação
-print("Iniciando contagem regressiva para o lançamento do MLBR...")
-for i in range(5, 0, -1):
-    print(f"{i}...")
+# contagem clássica
+print("Contagem regressiva p/ MLBR 🚀")
+for t in range(5, 0, -1):
+    print(f"{t}...")
     time.sleep(1)
 
-print("\nIgnição! Decolagem do MLBR!")
-time.sleep(2)
+print("\n🔥 Ignição! MLBR subindo!")
+time.sleep(1.5)
 
-# Carregar imagem da base de Alcântara
-if not os.path.exists(imagem_path):
-    print(f"⚠️  Imagem não encontrada: {imagem_path}")
-    print("Por favor, adicione a imagem da base de Alcântara na pasta /imagens com o nome 'alcantara.jpg'")
+# checar se tem imagem
+if not os.path.exists(img_path):
+    print(f"⚠️  Cadê a imagem? Esperava {img_path}")
+    print("Coloca a imagem da base de Alcântara na pasta 'imagens' com nome 'alcantara.jpg'")
     exit()
 
-img = mpimg.imread(imagem_path)
+# carregar o fundo
+img = mpimg.imread(img_path)
 
-# Plotando a trajetória
+# gráfico com fundo de Alcântara
 plt.figure(figsize=(10, 6))
-plt.imshow(img, extent=[min(altitudes), max(altitudes), min(velocidades), max(velocidades)], aspect='auto', alpha=0.3)
-plt.plot(altitudes, velocidades, marker='o', linestyle='-', color='red')
+plt.imshow(img, extent=[min(alt_km), max(alt_km), min(vel_ms), max(vel_ms)],
+           aspect='auto', alpha=0.25)
 
-plt.title("Trajetória do MLBR (Microlançador Brasileiro) - Brasil no espaço!")
+plt.plot(alt_km, vel_ms, 'ro-', linewidth=2)
+
+plt.title("Simulação de voo - MLBR")
 plt.xlabel("Altitude (km)")
 plt.ylabel("Velocidade (m/s)")
 plt.grid(True)
 
-for alt, vel, est in zip(altitudes, velocidades, estagios):
-    plt.annotate(f" {est}", (alt, vel), textcoords="offset points", xytext=(0,10), ha='center')
-    print(f"\n {est}: Altitude = {alt} km | Velocidade = {vel} m/s")
-    time.sleep(2)
+# anotações das fases
+for a, v, nome in zip(alt_km, vel_ms, fases):
+    plt.annotate(f" {nome}", (a, v), textcoords="offset points", xytext=(0, 12), ha='center')
+    print(f"{nome}: Alt {a} km | Vel {v} m/s")
+    time.sleep(1)
 
 plt.tight_layout()
 plt.show()
 
-print("\n Missão cumprida! Satélite em órbita! Brasil no espaço!")
+print("\n✅ Satélite inserido! Brasil na órbita!")
